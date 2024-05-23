@@ -8,11 +8,11 @@ MAX_RESULTS = 2
 
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
-def getChannelID(username):
+def getChannelID(channelname):
     request = youtube.search().list(
         type='channel', 
         part='snippet', 
-        q = 'HandOfUncut',
+        q = channelname,
         maxResults=1
     )
 
