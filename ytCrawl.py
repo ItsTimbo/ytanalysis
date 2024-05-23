@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 import pprint as p
 import wordAnalysis
 
-API_KEY = 'AIzaSyDC2FStgmFWW34G0jsrsOq6U35YXUAw5b8'
+API_KEY = 'AIzaSyCnz_biDInIWsscw2s69AwDYD--ye8yTxY'
 
 MAX_RESULTS = 2
 
@@ -10,8 +10,8 @@ youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 def getChannelID(channelname):
     request = youtube.search().list(
-        type='channel', 
-        part='snippet', 
+        type='channel',
+        part='snippet',
         q = channelname,
         maxResults=1
     )
