@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 import pprint as p
 import wordAnalysis
 
-API_KEY = 'AIzaSyCnz_biDInIWsscw2s69AwDYD--ye8yTxY'
+API_KEY = 'API-KEY'
 
 MAX_RESULTS = 2
 
