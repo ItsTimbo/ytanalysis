@@ -3,12 +3,11 @@ import pprint as p
 import wordAnalysis
 import configparser as cfp
 
-MAX_RESULTS = 2
-
 config = cfp.ConfigParser()
 config.read('config.ini')
 
-API_KEY = config['API']['key']
+API_KEY = config['Api']['key']
+MAX_RESULTS = config['Settings']['results']
 
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
@@ -45,7 +44,7 @@ def getVideoIDs(channelID):
     return videoIDs
 
 def getVideoDetails(channelID):
-    videoIDs =getVideoIDs(channelID)
+    videoIDs = getVideoIDs(channelID)
     
     videoDetails = []
     for videoID in videoIDs:

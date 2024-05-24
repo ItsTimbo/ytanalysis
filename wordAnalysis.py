@@ -1,4 +1,4 @@
-import gensim
+from gensim import models as gsm
 import nltk
 from nltk.corpus import stopwords
 from gensim import corpora
@@ -18,7 +18,7 @@ def analyze(documents):
     corpus = [dictionary.doc2bow(text) for text in texts]
 
     # Apply LDA
-    lda_model = gensim.models.ldamodel.LdaModel(corpus, num_topics=2, id2word=dictionary, passes=15)
+    lda_model = gsm.ldamodel.LdaModel(corpus, num_topics=2, id2word=dictionary, passes=15)
 
     topics = []
     # Print the topics
